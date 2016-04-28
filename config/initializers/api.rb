@@ -1,0 +1,1 @@
+LOL_KEY = ENV["LOL_KEY"]
