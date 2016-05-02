@@ -158,9 +158,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: black; }
 a:hover {
-  color: #0FA0CE; }
+  color: #D3D3D3; }
 
 
 /* Buttons
@@ -270,8 +270,8 @@ select:focus {
   outline: 0; }
 label,
 legend {
-  display: block;
-  margin-bottom: .5rem;
+/*  display: block;
+*/  margin-bottom: .5rem;
   font-weight: 600; }
 fieldset {
   padding: 0;
