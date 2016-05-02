@@ -1,0 +1,7 @@
+.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
+  text-align: center;
+}
+
+.remember-me {
+  display: inline-block;
+}
