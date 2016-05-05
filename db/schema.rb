@@ -11,29 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505171846) do
+ActiveRecord::Schema.define(version: 20160505195219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "battle_games", force: :cascade do |t|
+    t.integer "battle_id", null: false
+    t.integer "game_id",   null: false
+  end
+
+  add_index "battle_games", ["battle_id"], name: "index_battle_games_on_battle_id", using: :btree
+  add_index "battle_games", ["game_id"], name: "index_battle_games_on_game_id", using: :btree
+
   create_table "battles", force: :cascade do |t|
-    t.text     "question_text",    null: false
-    t.text     "possible_answers", null: false
-    t.text     "correct_answer",   null: false
-    t.string   "enemy_champion",   null: false
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.text     "question_text",                 null: false
+    t.text     "possible_answers", default: [],              array: true
+    t.text     "correct_answer",                null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "games", force: :cascade do |t|
-    t.boolean  "win",         default: false
-    t.integer  "user_id",                     null: false
-    t.integer  "question_id",                 null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.boolean  "win",        default: false
+    t.integer  "user_id",                    null: false
+    t.text     "battle_ids", default: [],                 array: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
-  add_index "games", ["question_id"], name: "index_games_on_question_id", using: :btree
   add_index "games", ["user_id"], name: "index_games_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
