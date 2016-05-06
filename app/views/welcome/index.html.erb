@@ -1,3 +1,4 @@
+  <p class="notice"><%= notice %></p>
   <div class = "row">
   <div class = "twelve columns intro"><h2>Welcome to the Summoner's Universe!</h2></div>
   </div>
@@ -6,12 +7,12 @@
   </div>
 
   <div class = "row"> 
-    <div class = "four columns champion-info">Ashe<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Ashe')}.jpg", class: "champion-img"), new_game_path(champion: "Ashe")) %></div>
-    <div class = "four columns champion-info">Janna<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Janna')}.jpg", class: "champion-img"), new_game_path(champion: "Janna")) %></div>
-    <div class = "four columns champion-info">Olaf<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Olaf')}.jpg", class: "champion-img"), new_game_path(champion: "Olaf")) %></div>
+    <div class = "four columns champion-info">Ashe<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Ashe')}.jpg", class: "champion-img"), games_path(champion: "Ashe"), method: :post) %></div>
+    <div class = "four columns champion-info">Janna<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Janna')}.jpg", class: "champion-img"), games_path(champion: "Janna"), method: :post) %></div>
+    <div class = "four columns champion-info">Olaf<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Olaf')}.jpg", class: "champion-img"), games_path(champion: "Olaf"), method: :post) %></div>
   </div>
   <div class = "row">
-    <div class = "four columns champion-info">Rengar<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Rengar')}.jpg", class: "champion-img"), new_game_path(champion: "Rengar")) %></div>
-    <div class = "four columns champion-info">Talon<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Talon')}.jpg", class: "champion-img"), new_game_path(champion: "Talon")) %></div>
-    <div class = "four columns champion-info">Yorick<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Yorick')}.jpg", class: "champion-img"), new_game_path(champion: "Yorick")) %></div>
+    <div class = "four columns champion-info">Rengar<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Rengar')}.jpg", class: "champion-img"), games_path(champion: "Rengar"), method: :post) %></div>
+    <div class = "four columns champion-info">Talon<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Talon')}.jpg", class: "champion-img"), games_path(champion: "Talon"), method: :post) %></div>
+    <div class = "four columns champion-info">Yorick<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{User.get_skin_image('Yorick')}.jpg", class: "champion-img"), games_path(champion: "Yorick"), method: :post) %></div>
   </div>
