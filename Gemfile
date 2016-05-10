@@ -12,6 +12,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'nokogiri'
 gem 'angularjs-rails', '~> 1.5'
+gem 'momentjs-rails'
 
 group :development, :test do
   gem 'byebug'
