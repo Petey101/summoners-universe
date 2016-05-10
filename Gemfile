@@ -13,6 +13,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 gem 'devise'
 gem 'nokogiri'
+gem 'angularjs-rails', '~> 1.5'
 
 group :development, :test do
   gem 'byebug'
