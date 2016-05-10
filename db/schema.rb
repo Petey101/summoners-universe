@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160505195219) do
     t.integer  "user_id",                         null: false
     t.string   "picked_champion",                 null: false
     t.string   "completed",       default: "f",   null: false
+    t.datetime "time_remaining",                  null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end

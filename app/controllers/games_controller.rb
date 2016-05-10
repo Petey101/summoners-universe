@@ -18,7 +18,6 @@ class GamesController < ApplicationController
 
   def show
   	@game = Game.find(params[:id])
-    @time_remaining = @game.created_at + 10.minutes
   end
 
 end

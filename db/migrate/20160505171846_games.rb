@@ -5,6 +5,7 @@ class Games < ActiveRecord::Migration
   		t.references :user, index: true, null: false
   		t.string :picked_champion, null: false
   		t.string :completed, default: false, null: false
+      t.datetime :time_remaining, null: false
   		
   		t.timestamps null: false
   	end
