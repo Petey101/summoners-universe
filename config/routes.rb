@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/games/check_answer', to: 'games#check_answer', as: 'check_answer'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :games, only: [:create, :show]
   resources :battles, only: [:show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
