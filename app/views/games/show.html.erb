@@ -1,4 +1,10 @@
 <div class = "row">
+  <div class = "twelve columns" id="countdown-holder">
+    <%=@game.time_limit%>
+  </div>
+</div>
+
+<div class = "row">
 	<div class = "twelve columns">
 		You are <%= @game.picked_champion %>!
 		<%= @game.battles.first.question_text %>
