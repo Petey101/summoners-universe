@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20160505195219) do
   enable_extension "plpgsql"
 
   create_table "battle_games", force: :cascade do |t|
-    t.integer "battle_id", null: false
-    t.integer "game_id",   null: false
+    t.integer "battle_id",                 null: false
+    t.integer "game_id",                   null: false
+    t.boolean "solved",    default: false
   end
 
   add_index "battle_games", ["battle_id"], name: "index_battle_games_on_battle_id", using: :btree
@@ -36,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160505195219) do
     t.boolean  "win",             default: false, null: false
     t.integer  "user_id",                         null: false
     t.string   "picked_champion",                 null: false
-    t.string   "completed",       default: "f",   null: false
+    t.boolean  "completed",       default: false, null: false
     t.datetime "time_limit",                      null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
