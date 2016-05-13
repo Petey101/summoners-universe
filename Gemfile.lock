@@ -45,6 +45,8 @@ GEM
     byebug (8.2.5)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
+    countdown (0.1.0)
+      json
     debug_inspector (0.0.2)
     devise (4.1.0)
       bcrypt (~> 3.0)
@@ -161,6 +163,7 @@ DEPENDENCIES
   angularjs-rails (~> 1.5)
   bcrypt (~> 3.1.7)
   byebug
+  countdown
   devise
   jbuilder (~> 2.0)
   jquery-rails
