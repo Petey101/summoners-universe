@@ -6,7 +6,7 @@ if(document.getElementById("countdown-holder")){
   var start = moment.utc(start_time_plus_four_hours,"HH:mm:ss");
   var end = moment.utc(end_time_string,"HH:mm:ss");
   var duration = moment.duration(end.diff(start, true));
-  var result = moment.utc(+duration).format("mm:ss");
+  var result = moment.utc(+duration).format("HH:mm:ss");
   
   end_time.innerHTML = "Remaining Time: " + result;
 }
