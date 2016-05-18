@@ -15,6 +15,7 @@ gem 'angularjs-rails', '~> 1.5'
 gem 'momentjs-rails'
 gem 'countdown'
 gem 'bower-rails'
+gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'byebug'
