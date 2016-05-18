@@ -18,6 +18,9 @@ class GamesController < ApplicationController
   	unsolved_battles = @game.battle_games.where(solved: false)
   	@current_battle = Battle.find(unsolved_battles.first.battle_id)
     @start_time = Time.now
+    @game_meta = {
+      time_limit: @game.time_limit
+    }
   end
 
   def check_answer

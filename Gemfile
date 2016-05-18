@@ -16,6 +16,7 @@ gem 'momentjs-rails'
 gem 'countdown'
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'rails_hydration'
 
 group :development, :test do
   gem 'byebug'
