@@ -5,7 +5,7 @@ myApp.controller('CountdownController',
   function($scope, $http, $routeParams, $document){
   $http.get('/games/' + $routeParams.id).then(function(response){
     Hydration.onReady(function(data){
-      console.log(data.gameMeta.time_limit)
+      $scope.time_limit = data.gameMeta.time_limit
     })
   })
 }]);
