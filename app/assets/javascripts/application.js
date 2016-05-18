@@ -13,7 +13,6 @@
 //= require angular
 //= require app
 //= require controllers
-//= require directives
 //= require angular-route
 //= require angular-rails-templates
 //= require jquery
