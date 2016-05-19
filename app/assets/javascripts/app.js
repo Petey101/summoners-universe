@@ -2,7 +2,7 @@
 
 'use strict';
 
-var myApp = angular.module('summoners-universe', ['ngRoute', 'templates'])
+var myApp = angular.module('summoners-universe', ['ngRoute', 'templates', 'angularMoment'])
   
 myApp.config(['$routeProvider', "$locationProvider", function($routeProvider, $locationProvider){
   $routeProvider

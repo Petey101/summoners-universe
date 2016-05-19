@@ -14,12 +14,13 @@ class GamesController < ApplicationController
   end
 
   def show
+    Time.zone = "EST"
   	@game = Game.find(params[:id])
   	unsolved_battles = @game.battle_games.where(solved: false)
   	@current_battle = Battle.find(unsolved_battles.first.battle_id)
-    @start_time = Time.now
     @game_meta = {
-      time_limit: @game.time_limit
+      time_limit: @game.time_limit,
+      start_time: Time.zone.now
     }
   end
 
