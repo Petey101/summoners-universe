@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require angular
+//= require rails_hydration
+//= require moment
 //= require app
 //= require controllers
 //= require angular-route

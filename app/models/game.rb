@@ -7,7 +7,8 @@ class Game < ActiveRecord::Base
 
   private
   def generate_time_limit
-    self.time_limit = Time.now + 10.minutes
+    Time.zone = "EST"
+    self.time_limit = Time.zone.now + 10.minutes
   end
 
 end
