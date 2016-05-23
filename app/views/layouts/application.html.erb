@@ -12,7 +12,7 @@
 
     <% if user_signed_in? %>
       <ul>
-        <li class = "root"><%= link_to "Summoner's Universe", root_path %></li>
+        <li class = "root"><%= link_to "Summoner's Universe", "/" %></li>
         <li class = "non-root"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         <li class = "non-root"><%= link_to current_user.email, current_user %></li>
       </ul>
