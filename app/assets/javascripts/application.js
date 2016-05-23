@@ -14,6 +14,7 @@
 //= require rails_hydration
 //= require moment
 //= require app
+//= require services
 //= require controllers
 //= require angular-route
 //= require angular-rails-templates
