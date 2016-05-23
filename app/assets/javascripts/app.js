@@ -2,7 +2,7 @@
 
 'use strict';
 
-var myApp = angular.module('summoners-universe', ['ngRoute', 'templates', 'angularMoment'])
+var myApp = angular.module('summoners-universe', ['ngRoute', 'templates'])
   
 myApp.config(['$routeProvider', "$locationProvider", function($routeProvider, $locationProvider){
   $routeProvider
@@ -10,5 +10,6 @@ myApp.config(['$routeProvider', "$locationProvider", function($routeProvider, $l
     controller: 'CountdownController',
     templateUrl: "timer.html"
   })
+  //need to set it so that we can go to root and user show.
   $locationProvider.html5Mode({ enabled: true, requireBase: false }); 
 }])
