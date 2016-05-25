@@ -9,8 +9,11 @@ myApp.controller('CountdownController',
       $scope.start_time = data.gameMeta.start_time
       $scope.countdown = startTimer.countdownTimer($scope.time_limit, $scope.start_time);
       $scope.onTimeout = function(){
-        $scope.countdown--;
+        $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
+          // $scope.countdown = $scope.countdown / 60
+          console.log(Math.floor($scope.countdown/60000) + ":" + Math.floor($scope.countdown % 60000))
+
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
           return;
