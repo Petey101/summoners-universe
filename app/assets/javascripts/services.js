@@ -6,8 +6,8 @@ myApp.service("startTimer", function(){
   var end = moment.duration(endTime, "m")._milliseconds
   var start = moment.duration(startTime, "m")._milliseconds
   var remainingTime = moment.duration(end - start)
-  var timer = moment.duration(remainingTime._milliseconds)
-  return timer.minutes()
+  var timer = moment.duration(remainingTime)
+  return timer
   }else{
     return "Time's up!"
   }
