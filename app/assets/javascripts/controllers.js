@@ -12,10 +12,10 @@ myApp.controller('CountdownController',
         $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
           var seconds = Math.floor(($scope.countdown % 60000)/1000).toString()
-          console.log(Math.floor($scope.countdown/60000) + ":" + (seconds.length < 2 ? '0' + seconds : seconds))
+          $scope.timer = (Math.floor($scope.countdown/60000) + ":" + (seconds.length < 2 ? '0' + seconds : seconds))
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
-          return;
+          return "Time's Up!";
         }
       }
         var mytimeout = $timeout($scope.onTimeout,1000);
