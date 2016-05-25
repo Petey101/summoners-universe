@@ -10,13 +10,14 @@ myApp.controller('CountdownController',
       $scope.countdown = startTimer.countdownTimer($scope.time_limit, $scope.start_time);
       $scope.onTimeout = function(){
         $scope.countdown--;
+        console.log($scope.countdown)
         if($scope.countdown >= 0){
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
-          return "Time is up!";
+          return;
         }
       }
-        var mytimeout = $timeout($scope.onTimeout,1000);    
+        var mytimeout = $timeout($scope.onTimeout,1000);  
       })
   })
 }]);
