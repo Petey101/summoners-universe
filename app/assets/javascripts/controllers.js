@@ -11,15 +11,14 @@ myApp.controller('CountdownController',
       $scope.onTimeout = function(){
         $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
-          // $scope.countdown = $scope.countdown / 60
-          console.log(Math.floor($scope.countdown/60000) + ":" + Math.floor($scope.countdown % 60000))
-
+          var seconds = Math.floor(($scope.countdown % 60000)/1000).toString()
+          console.log(Math.floor($scope.countdown/60000) + ":" + (seconds.length < 2 ? '0' + seconds : seconds))
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
           return;
         }
       }
-        var mytimeout = $timeout($scope.onTimeout,1000);  
+        var mytimeout = $timeout($scope.onTimeout,1000);
       })
   })
 }]);
