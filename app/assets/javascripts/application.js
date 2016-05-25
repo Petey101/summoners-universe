@@ -13,6 +13,7 @@
 //= require angular
 //= require rails_hydration
 //= require moment
+//= require moment-duration-format
 //= require app
 //= require services
 //= require controllers
