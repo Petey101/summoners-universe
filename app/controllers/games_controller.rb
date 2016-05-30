@@ -16,7 +16,7 @@ class GamesController < ApplicationController
   def show
     Time.zone = "EST"
   	@game = Game.find(params[:id])
-    if Time.zone.now > @game.time_limit
+    if @game.completed
       flash[:notice] = "That game has ended!"
       redirect_to root_path
     else
@@ -24,7 +24,7 @@ class GamesController < ApplicationController
     	@current_battle = Battle.find(unsolved_battles.first.battle_id)
       @game_meta = {
         time_limit: @game.time_limit,
-        start_time: Time.zone.now + 9.minutes + 50.seconds
+        start_time: Time.zone.now + 9.minutes + 45.seconds
       }
     end
   end
@@ -55,7 +55,6 @@ class GamesController < ApplicationController
   def failed_game
     @game = Game.find(params[:id])
     @game.completed = true
-    @game.win = false
     @game.save
     flash[:notice] = "You lose!"
     redirect_to root_path
