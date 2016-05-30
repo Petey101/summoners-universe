@@ -24,7 +24,7 @@ class GamesController < ApplicationController
     	@current_battle = Battle.find(unsolved_battles.first.battle_id)
       @game_meta = {
         time_limit: @game.time_limit,
-        start_time: Time.zone.now
+        start_time: Time.zone.now + 9.minutes + 50.seconds
       }
     end
   end
@@ -50,6 +50,15 @@ class GamesController < ApplicationController
   		flash[:notice] = "Incorrect!"
   		redirect_to game_path(@game)
   	end
+  end
+
+  def failed_game
+    @game = Game.find(params[:id])
+    @game.completed = true
+    @game.win = false
+    @game.save
+    flash[:notice] = "You lose!"
+    redirect_to "/"
   end
 
 end

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get '/games/check_answer', to: 'games#check_answer', as: 'check_answer'
+  get '/games/failed_game', to: 'games#failed_game', as: 'failed_game'
   get '/spa-things/(*path)' => 'spa_things#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

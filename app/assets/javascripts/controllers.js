@@ -17,7 +17,9 @@ myApp.controller('CountdownController',
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
           $(".countdown-timer").html("Time's Up!")
-          $window.location.href = "/"
+          $http.get('/games/failed_game/?id=' + $routeParams.id).then(function(response){
+              $window.location.href = "/"
+          })
         }
       }
         var mytimeout = $timeout($scope.onTimeout,1000);
