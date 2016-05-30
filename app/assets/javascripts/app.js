@@ -10,6 +10,5 @@ myApp.config(['$routeProvider', "$locationProvider", function($routeProvider, $l
     controller: 'CountdownController',
     templateUrl: "timer.html"
   })
-  //need to set it so that we can go to root and user show.
   $locationProvider.html5Mode({ enabled: true, requireBase: false }); 
 }])

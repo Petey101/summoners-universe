@@ -16,12 +16,17 @@ class GamesController < ApplicationController
   def show
     Time.zone = "EST"
   	@game = Game.find(params[:id])
-  	unsolved_battles = @game.battle_games.where(solved: false)
-  	@current_battle = Battle.find(unsolved_battles.first.battle_id)
-    @game_meta = {
-      time_limit: @game.time_limit,
-      start_time: Time.zone.now
-    }
+    if Time.zone.now > @game.time_limit
+      flash[:notice] = "That game has ended already!"
+      redirect_to "/"
+    else
+    	unsolved_battles = @game.battle_games.where(solved: false)
+    	@current_battle = Battle.find(unsolved_battles.first.battle_id)
+      @game_meta = {
+        time_limit: @game.time_limit,
+        start_time: Time.zone.now
+      }
+    end
   end
 
   def check_answer
