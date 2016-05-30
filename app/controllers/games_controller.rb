@@ -17,7 +17,7 @@ class GamesController < ApplicationController
     Time.zone = "EST"
   	@game = Game.find(params[:id])
     if Time.zone.now > @game.time_limit
-      flash[:notice] = "That game has ended already!"
+      flash[:notice] = "That game has ended!"
       redirect_to "/"
     else
     	unsolved_battles = @game.battle_games.where(solved: false)

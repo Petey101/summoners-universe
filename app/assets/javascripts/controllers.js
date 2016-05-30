@@ -1,8 +1,8 @@
 'use strict';
 
 myApp.controller('CountdownController', 
-  ["$scope", "$http", "$location", "$routeParams", "$document", "$timeout", "startTimer",
-  function($scope, $http, $location, $routeParams, $document, $timeout,startTimer){
+  ["$scope", "$http", "$location", "$window", "$routeParams", "$document", "$timeout", "startTimer",
+  function($scope, $http, $location, $window, $routeParams, $document, $timeout,startTimer){
   $http.get('/games/' + $routeParams.id).then(function(response){
     Hydration.onReady(function(data){
       $scope.time_limit = data.gameMeta.time_limit
@@ -17,7 +17,7 @@ myApp.controller('CountdownController',
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
           $(".countdown-timer").html("Time's Up!")
-          redirectTo: "/"
+          $window.location.href = "/"
         }
       }
         var mytimeout = $timeout($scope.onTimeout,1000);
