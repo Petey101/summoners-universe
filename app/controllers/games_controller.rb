@@ -18,7 +18,7 @@ class GamesController < ApplicationController
   	@game = Game.find(params[:id])
     if Time.zone.now > @game.time_limit
       flash[:notice] = "That game has ended!"
-      redirect_to "/"
+      redirect_to root_path
     else
     	unsolved_battles = @game.battle_games.where(solved: false)
     	@current_battle = Battle.find(unsolved_battles.first.battle_id)
@@ -58,7 +58,7 @@ class GamesController < ApplicationController
     @game.win = false
     @game.save
     flash[:notice] = "You lose!"
-    redirect_to "/"
+    redirect_to root_path
   end
 
 end

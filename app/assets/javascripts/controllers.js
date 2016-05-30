@@ -7,8 +7,8 @@ myApp.controller('CountdownController',
     Hydration.onReady(function(data){
       $scope.time_limit = data.gameMeta.time_limit
       $scope.start_time = data.gameMeta.start_time
+  })
       $scope.countdown = startTimer.countdownTimer($scope.time_limit, $scope.start_time);
-
       $scope.onTimeout = function(){
         $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
@@ -17,14 +17,9 @@ myApp.controller('CountdownController',
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
           $(".countdown-timer").html("Time's Up!")
-          $http.get('/games/failed_game/?id=' + $routeParams.id).then(function(response){
-              $window.location.href = "/"
-          })
+          $http.get('/games/failed_game?id=' + $routeParams.id)
         }
       }
         var mytimeout = $timeout($scope.onTimeout,1000);
       })
-
-
-  })
 }]);
