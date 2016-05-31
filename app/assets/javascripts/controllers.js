@@ -1,25 +1,25 @@
 'use strict';
 
 myApp.controller('CountdownController', 
-  ["$scope", "$http", "$routeParams", "$document", "$timeout", "startTimer",
-  function($scope, $http, $routeParams, $document, $timeout,startTimer){
+  ["$scope", "$http", "$location", "$window", "$routeParams", "$document", "$timeout", "startTimer",
+  function($scope, $http, $location, $window, $routeParams, $document, $timeout,startTimer){
   $http.get('/games/' + $routeParams.id).then(function(response){
     Hydration.onReady(function(data){
       $scope.time_limit = data.gameMeta.time_limit
       $scope.start_time = data.gameMeta.start_time
+  })
       $scope.countdown = startTimer.countdownTimer($scope.time_limit, $scope.start_time);
       $scope.onTimeout = function(){
         $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
-          // $scope.countdown = $scope.countdown / 60
-          console.log(Math.floor($scope.countdown/60000) + ":" + Math.floor($scope.countdown % 60000))
-
+          var seconds = Math.floor(($scope.countdown % 60000)/1000).toString()
+          $scope.timer = (Math.floor($scope.countdown/60000) + ":" + (seconds.length < 2 ? '0' + seconds : seconds))
           mytimeout = $timeout($scope.onTimeout, 1000);
         }else{
-          return;
+          $(".countdown-timer").html("Time's Up!")
+          $http.get('/games/failed_game?id=' + $routeParams.id)
         }
       }
-        var mytimeout = $timeout($scope.onTimeout,1000);  
+        var mytimeout = $timeout($scope.onTimeout,1000);
       })
-  })
 }]);
