@@ -55,6 +55,7 @@ class GamesController < ApplicationController
   def failed_game
     @game = Game.find(params[:id])
     @game.completed = true
+    @game.win = false
     @game.save
     flash[:notice] = "You lose!"
     redirect_to root_path
