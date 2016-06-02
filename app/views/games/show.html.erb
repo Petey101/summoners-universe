@@ -5,12 +5,14 @@
 </ng-view>
 </section>
 
+<p class="notice"><%= notice %></p>
+
 <div class = "row">
 	<div class = "twelve columns">
 		You are <%= @game.picked_champion %>!
 		<%= @current_battle.question_text %>
 		<% @current_battle.possible_answers.each do |possible| %>
-			<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/4.4.3/img/item/#{possible[1]}.png", class: "tooltip", title: Battle.get_item_info(possible[1]), controller: :games, action: :check_answer, game_id: @game.id, battle_id: @current_battle.id, chosen_answer: possible[0])) %>
+			<%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/4.4.3/img/item/#{possible[1]}.png", class: "tooltip", title: Battle.get_item_info(possible[1])), controller: :games, action: :check_answer, game_id: @game.id, battle_id: @current_battle.id, chosen_answer: possible[0]) %>
 		<% end %>
 	</div>
 </div>
