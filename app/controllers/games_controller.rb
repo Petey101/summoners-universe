@@ -24,7 +24,7 @@ class GamesController < ApplicationController
     	@current_battle = Battle.find(unsolved_battles.first.battle_id)
       @game_meta = {
         time_limit: @game.time_limit,
-        start_time: Time.zone.now + 9.minutes + 45.seconds
+        start_time: Time.zone.now
       }
     end
   end
