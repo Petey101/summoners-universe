@@ -10,6 +10,8 @@ myApp.controller('CountdownController',
   })
       $scope.countdown = startTimer.countdownTimer($scope.time_limit, $scope.start_time);
 
+       // var timeout = startTimer.timeOut($scope.countdown, $scope.timer, $window.location.href, $routeParams.id)
+
       $scope.onTimeout = function(){
         $scope.countdown = $scope.countdown - 1000
         if($scope.countdown >= 0){
