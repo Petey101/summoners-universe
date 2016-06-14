@@ -13,7 +13,7 @@
     <div class = "nav navbar-nav">
 
     <% if user_signed_in? %>
-        <%= link_to "Summoner's Universe", "/",  class: "nav-link root" %></li>
+        <%= link_to "Summoner's Universe", "/",  class: "nav-link root" %>
         <%= link_to 'Logout', destroy_user_session_path, method: :delete,  class: "nav-link non-root" %>
         <%= link_to current_user.email, current_user ,  class: "nav-link non-root"%></li>
     <% else %>
@@ -34,3 +34,4 @@
     <%= yield %>
 </body>
 </html>
+
