@@ -1,0 +1,29 @@
+@import "bootstrap";
+
+body {
+  background-color: #AD9393;
+}
+
+.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
+  text-align: center;
+}
+
+.remember-me {
+  display: inline-block;
+}
+
+.intro {
+  text-align: center;
+}
+
+.champion-img{
+  width: 100%;
+}
+
+.champion-info{
+  text-align: center;
+}
+
+ .navbar-nav{
+  float: right;
+ }

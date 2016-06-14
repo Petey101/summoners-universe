@@ -17,6 +17,7 @@ gem 'countdown'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'rails_hydration'
+gem 'bootstrap'
 
 group :development, :test do
   gem 'byebug'
