@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+body {
+  background-color: #AD9393;
+}
+
+.intro {
+  text-align: center;
+}
+
+.champion-img{
+  width: 100%;
+}
+
+.champion-info{
+  text-align: center;
+}
+
+.root {
+    float: left;
+    margin-bottom: 0;
+}
+
+.non-root {
+    float: right;
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #B0B0B0;
+}
+
+img {
+  background-color: black;
+}
+
+.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
+  text-align: center;
+}
