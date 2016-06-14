@@ -1,15 +1,11 @@
 @import "bootstrap";
+$body-bg: transparent; 
 
 body {
-  background-color: #AD9393;
-}
-
-.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
-  text-align: center;
-}
-
-.remember-me {
-  display: inline-block;
+    background-image: url(../imgs/league.jpg);
+    background-size: cover;
+    height: 100%;
+    text-align: center;
 }
 
 .intro {
@@ -24,6 +20,19 @@ body {
   text-align: center;
 }
 
- .navbar-nav{
-  float: right;
- }
+.root {
+    float: left;
+    margin-bottom: 0;
+}
+
+.non-root {
+    float: right;
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    background-image: url(../imgs/league.jpg);
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+}
