@@ -1,11 +1,7 @@
 @import "bootstrap";
-$body-bg: transparent; 
 
 body {
-    background-image: url(../imgs/league.jpg);
-    background-size: cover;
-    height: 100%;
-    text-align: center;
+  background-color: #AD9393;
 }
 
 .intro {
@@ -31,8 +27,5 @@ body {
 }
 
 .jumbotron {
-    background-image: url(../imgs/league.jpg);
-    background-size: cover;
-    height: 100%;
     text-align: center;
 }
