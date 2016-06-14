@@ -13,10 +13,12 @@
   		<p>You are <%= @game.picked_champion %>!</p>
   		<p><%= @current_battle.question_text %></p>
   </div>
+  </div>
 
   <div class = "container">
-  <% @current_battle.possible_answers.each do |possible| %>
-  	<div class = "col-sm-3"> <%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/4.4.3/img/item/#{possible[1]}.png", class: "tooltip", title: Battle.get_item_info(possible[1])), controller: :games, action: :check_answer, game_id: @game.id, battle_id: @current_battle.id, chosen_answer: possible[0]) %></div>
+  <div class = "row">
+      <% @current_battle.possible_answers.each do |possible| %>
+  	 <div class = "col-sm-3 item"><%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/4.4.3/img/item/#{possible[1]}.png", class: "tooltip", title: Battle.get_item_info(possible[1])), controller: :games, action: :check_answer, game_id: @game.id, battle_id: @current_battle.id, chosen_answer: possible[0]) %></div>
   		<% end %>
   </div>
 </div>
