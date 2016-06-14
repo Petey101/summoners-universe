@@ -1,12 +1,12 @@
 this.tooltip = function(){		
-	$(".tooltip").hover(function(e){											  
+	$(".tooltips").hover(function(e){											  
 		this.t = this.title;
 		this.title = "";								  
-		$("body").append("<p id='tooltip'>"+ this.t +"</p>");
+		$("body").append("<div class = 'item-tooltip'><br><div class='container'><div class='row'>"+ this.t +"</div></div></div>");
     },
 	function(){
 		this.title = this.t;		
-		$("#tooltip").remove();
+		$(".item-tooltip").remove();
     });		
 };
 $(document).ready(function(){

@@ -31,10 +31,9 @@ body {
     background-color: #B0B0B0;
 }
 
-.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
-  text-align: center;
-}
-
 .remember-me {
   display: inline-block;
+}
+.header, .signup-errors, .email, .password, .password-confirmation, .submit, .remember-me, .shared-links {
+  text-align: center;
 }
