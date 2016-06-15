@@ -1,53 +1,18 @@
 <div class = "container">
-<div class = "row">
-  <div class = "twelve columns header">
-    <h2>Log In</h2>
-  </div>
-</div>
+<div class = "wrapper">
 
-<div class = "row">
-<div class = "twelve columns errors">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-</div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns email">
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-</div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns password">
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-</div>
-</div>
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <h2 class = "log-in">Log In</h2>
+  <%= f.email_field :email, autofocus: true %>
+  <%= f.password_field :password, autocomplete: "off" %>
 
   <% if devise_mapping.rememberable? -%>
-  <div class = "row">
-  <div class = "twelve columns remember-me">
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  </div>
-  </div>
+    <%= f.check_box :remember_me %>
   <% end -%>
 
-<div class = "row">
-<div class = "twelve columns submit">
-  <div class="actions">
     <%= f.submit "Log in" %>
-  </div>
-</div>
-</div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 </div>

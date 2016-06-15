@@ -18,6 +18,7 @@ gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'rails_hydration'
 gem 'bootstrap'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug'

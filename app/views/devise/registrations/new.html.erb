@@ -1,54 +1,18 @@
 <div class = "container">
-<div class = "row">
-  <div class = "twelve columns header">
-    <h2>Sign up</h2>
-  </div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns errors">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class = "wrapper">
+  <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
-</div>
-</div>
+    <h2 class = "sign-up">Sign up</h2>
+      <%= f.email_field :email, autofocus: true %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.submit "Sign up" %>
+  <% end %>
 
-<div class = "row">
-<div class = "twelve columns email">
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <%= render "devise/shared/links" %>
   </div>
-</div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns password">
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-</div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns password-confirmation">
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-</div>
-</div>
-
-<div class = "row">
-<div class = "twelve columns submit">
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-</div>
-</div>
-<% end %>
-
 </div>
