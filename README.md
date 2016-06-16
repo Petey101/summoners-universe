@@ -1,5 +1,17 @@
-<h1>README</h1>
+#Welcome to the Summoner's Universe!
+<p>Welcome! This web app will help you to improve your League of Legends' game. By selecting a hero, you will be led into your game, where you will have 10 minutes to solve all the questions provided. Each question will have four answers, or items, to select from. Not to worry-just hover over each item to get a description. You'll probably find some helpful hints!</p>
+<p>Link Goes Here</p>
 
-<p>Welcome to the Summoner's Universe! This simple web app utilizes the League of Legends API to create a question-and-answer game that aims to improve the user's understanding of League's gameplay.</p>
+#Technologies
+<ul>
+  <li>Back End: Rails, Active Record, PostgreSQL</li>
+  <li>Front End: HTML, CSS, JavaScript, AngularJS, jQuery, Bootstrap<li>
+  <li>APIs: League of Legends</li>
+  <li>User Auth: Devise</li>
+</ul>
 
-<p>Images and further description coming soon!</p>
+#The Team
+<ul>
+  <li>Peter Leong(@petey101)</li>
+  <li>Jonathan Silvestri(@silvestrijonathan)</li>
+</ul>
