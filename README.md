@@ -12,6 +12,6 @@
 
 #The Team
 <ul>
-  <li><a href="https://github.com/Petey101">Peter Leong</a></li>
-  <li><a href="https://github.com/silvestrijonathan">Jonathan Silvestri</a></li>
+  <li>Peter Leong</li>
+  <li>Jonathan Silvestri</li>
 </ul>
