@@ -5,13 +5,13 @@
 #Technologies
 <ul>
   <li>Back End: Rails, Active Record, PostgreSQL</li>
-  <li>Front End: HTML, CSS, JavaScript, AngularJS, jQuery, Bootstrap<li>
+  <li>Front End: HTML, CSS, JavaScript, AngularJS, jQuery, Bootstrap</li>
   <li>APIs: League of Legends</li>
   <li>User Auth: Devise</li>
 </ul>
 
 #The Team
 <ul>
-  <li>Peter Leong(@petey101)</li>
-  <li>Jonathan Silvestri(@silvestrijonathan)</li>
+  <li><a href="github.com/petey101">Peter Leong</a></li>
+  <li><a href="github.com/silvestrijonathan">Jonathan Silvestri</a></li>
 </ul>
