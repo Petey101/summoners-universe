@@ -8,7 +8,7 @@ class GamesController < ApplicationController
   	if @game.save
   		redirect_to game_path(@game)
   	else
-  		flash[:notice] = "Stop it"
+  		flash[:alert] = "You can't do that."
   		redirect_to root_path
   	end
   end
@@ -17,7 +17,7 @@ class GamesController < ApplicationController
     Time.zone = "EST"
   	@game = Game.find(params[:id])
     if @game.completed
-      flash[:notice] = "That game has ended!"
+      flash[:alert] = "That game has ended!"
       redirect_to root_path
     else
     	unsolved_battles = @game.battle_games.where(solved: false)
@@ -43,11 +43,11 @@ class GamesController < ApplicationController
   			flash[:notice] = "You win!"
   			redirect_to root_path
   		else
-  		flash[:notice] = "Correct!"
+  		flash[:notice] = "That is Correct!"
   		redirect_to game_path(@game)
   		end
   	else
-  		flash[:notice] = "Incorrect!"
+  		flash[:alert] = "That is Incorrect!"
   		redirect_to game_path(@game)
   	end
   end
@@ -57,7 +57,7 @@ class GamesController < ApplicationController
     @game.completed = true
     @game.win = false
     @game.save
-    flash[:notice] = "You lose!"
+    flash[:alert] = "You lose!"
     redirect_to root_path
   end
 
