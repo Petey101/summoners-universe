@@ -11,4 +11,11 @@ class User < ActiveRecord::Base
     "#{all_champs['data'][champ]['key']}_#{all_champs['data'][champ]['skins'].sample['num']}"
   end
 
+  def get_win_ratio
+
+  end
+
+  def get_loss_ratio
+  end
+
 end
