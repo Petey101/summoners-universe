@@ -1,7 +1,7 @@
 <div class = "container">
 	<div class = "row">
 		<div class="intro">
-			<img src= "<%= Gchart.pie_3d(title: "Win/loss ratio", background: 'AD9393', legend:["Win", "Loss"], data: [5, 95]) %>" >
+			<img src= "<%= Gchart.pie_3d(title: "Win/loss ratio", background: 'AD9393', legend:["#{@games_won} Game(s) Won", "#{@games_lost} Game(s) Lost"], data: [@win_ratio, @loss_ratio], size: '400x400') %>" >
 		</div>
 	</div>
 </div>

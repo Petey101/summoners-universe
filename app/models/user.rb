@@ -11,11 +11,20 @@ class User < ActiveRecord::Base
     "#{all_champs['data'][champ]['key']}_#{all_champs['data'][champ]['skins'].sample['num']}"
   end
 
-  def get_win_ratio
+  def games_won
+    self.games.where(completed:true, win:true)
+  end
 
+  def games_lost
+    self.games.where(completed:true, win:false)
+  end
+
+  def get_win_ratio
+    ((self.games_won.length).round(2) / (self.games.length).round(2)) * 100 
   end
 
   def get_loss_ratio
+    ((self.games_lost.length).round(2) / (self.games.length).round(2)) * 100 
   end
 
 end
