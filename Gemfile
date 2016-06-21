@@ -19,6 +19,7 @@ gem 'angular-rails-templates'
 gem 'rails_hydration'
 gem 'bootstrap'
 gem 'bootstrap_form'
+gem 'googlecharts'
 
 group :development, :test do
   gem 'byebug'
