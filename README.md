@@ -26,13 +26,13 @@
 <p>Once you select a hero, you are taken to the battle page. Answer all the questions correctly, and you'll win the game! Run out of time...and you lose!</p>
 
 <div>
-  <p>Welcome Page, after logging in.</p>
+  <p>Battle Page.</p>
   <img src = "./app/assets/images/game.png" />
 </div>
 
 <p>Your win/loss ratio is tracked internally, and displayed via pie graph on your profile page</p>
 <div>
-  <p>User stats</p>
+  <p>User Stats.</p>
   <img src = "./app/assets/images/winloss.png" />
 </div>
 
