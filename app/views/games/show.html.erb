@@ -12,9 +12,14 @@
 
 <div class = "container-fluid">
   <div class = "row">
-  		<div class="col-sm-12">You are <%= @game.picked_champion %>!<br>
-  		<%= @current_battle.question_text %><br>
-      Scroll over each icon to gain some hints!</div>
+    <div class = "col-sm-12">
+    <p>Scroll over each icon to gain some hints.</p>
+    </div>
+  </div>
+  <div class = "row">
+  		<div class="col-sm-12"><p>You are <%= @game.picked_champion %>.<br>
+  		<%= @current_battle.question_text %></p>
+      </div>
   </div>
   </div>
   
