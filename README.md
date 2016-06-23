@@ -1,7 +1,7 @@
 #Welcome to the Summoner's Universe!
 <p>Welcome! This web app will help you to improve your League of Legends' game.</p> 
 <p>By selecting a hero, you will be led into your game, where you will have 10 minutes to solve all the questions provided. Each question will have four answers, or items, to select from. Not to worry-just hover over each item to get a description. You'll probably find some helpful hints!</p>
-<p>THis website is built with a responsive design, but the best user experience comes on desktop</p>
+<p>This website is built with a responsive design, but the best user experience comes on desktop.</p>
 <a href="https://summoners-universe.herokuapp.com"><p>Click here to visit the site!</p></a>
 
 #Technologies
