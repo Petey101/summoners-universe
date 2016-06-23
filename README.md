@@ -32,7 +32,7 @@
 
 <p>Your win/loss ratio is tracked internally, and displayed via pie graph on your profile page</p>
 <div>
-  <p>Welcome Page, after logging in.</p>
+  <p>User stats</p>
   <img src = "./app/assets/images/winloss.png" />
 </div>
 
