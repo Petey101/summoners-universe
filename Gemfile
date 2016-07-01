@@ -20,6 +20,7 @@ gem 'rails_hydration'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'googlecharts'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'

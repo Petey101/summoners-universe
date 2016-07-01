@@ -1,5 +1,17 @@
 @import "bootstrap";
 
+.progress-bar {
+ background: red;
+ border: 1px solid black;
+ height: 25px;
+ display: none;  
+ text-align: center;
+}
+
+#perc{
+    color: black;
+}
+
 body {
   background-color: #AD9393;
 }
