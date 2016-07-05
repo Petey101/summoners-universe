@@ -1,20 +1,21 @@
 'use strict';
 
-myApp.service("startTimer", ["$timeout", function($timeout){
+myApp.service("startTimer", [function(){
 
-  this.updateProgressBar = function(percentage){
+  this.updateHealthBar = function(percentage){
+    $(".health-header").show();
     $(".progress-bar").show();
     $(".progress-bar").css("width", percentage + "%");
-    $("#perc").html(percentage + "%")
+    $(".health-header").html("Your Health: " + percentage + "%")
   }
 
-  this.calculateProgressBar = function(timer){
+  this.calculateHealthBar = function(timer){
     var maxTime = 600000;
     var perc = Math.round((timer / maxTime) * 100);
     if(perc <= 100){
-      this.updateProgressBar(perc);
+      this.updateHealthBar(perc);
     }else{
-      this.updateProgressBar(100);
+      this.updateHealthBar(100);
     }
   }
 
@@ -23,7 +24,7 @@ myApp.service("startTimer", ["$timeout", function($timeout){
     var start = moment.duration(startTime, "m")._milliseconds;
     var remainingTime = moment.duration(end - start);
     var timer = moment.duration(remainingTime);
-    this.calculateProgressBar(timer._milliseconds);
+    this.calculateHealthBar(timer._milliseconds);
     return timer;
 };
 
