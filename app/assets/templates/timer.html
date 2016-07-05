@@ -6,9 +6,17 @@ Time Remaining: {{timer}}
 
 <div class = "row">
 <div class = "col-sm-6">
-<span class = "health-header"></span> <div class="progress-bar" role="progressbar" aria-valuenow="100"
+<span class = "player-health-header"></span> 
+
+<div class="progress-bar" role="progressbar" aria-valuenow="100"
   aria-valuemin="0" aria-valuemax="100" style="width:0%"> 
-    <span id = "perc">{{health}}</span>
+    <span class = "perc">{{health}}</span>
 </div>
+</div>
+
+<div class = "col-sm-6">
+<span class = "enemy-health-header"></span>
+<div class="enemy-progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:0%"> 
+    <span class = "perc">{{enemyHealth}}</span>
 </div>
 </div>

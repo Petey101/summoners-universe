@@ -1,12 +1,19 @@
 'use strict';
 
-myApp.service("startTimer", [function(){
+myApp.service("gameTimer", [function(){
 
   this.updateHealthBar = function(percentage){
-    $(".health-header").show();
+    $(".player-health-header").show();
     $(".progress-bar").show();
     $(".progress-bar").css("width", percentage + "%");
-    $(".health-header").html("Your Health: " + percentage + "%")
+    $(".player-health-header").html("Your Health: " + percentage + "%");
+  };
+
+  this.updateEnemyHealth = function(percentage){
+    $(".enemy-health-header").show();
+    $(".enemy-progress-bar").show();
+    $(".enemy-progress-bar").css("width", percentage + "%");
+    $(".enemy-health-header").html("Enemy's Health: " + percentage + "%");
   }
 
   this.calculateHealthBar = function(timer){
@@ -16,6 +23,15 @@ myApp.service("startTimer", [function(){
       this.updateHealthBar(perc);
     }else{
       this.updateHealthBar(100);
+    }
+  };
+
+  this.calculateEnemyHealth = function(totalQuestions, remainingQuestions){
+    var enemyPerc = Math.round((remainingQuestions/totalQuestions) * 100);
+    if(enemyPerc <= 100){
+      this.updateEnemyHealth(enemyPerc);
+    }else{
+      this.updateEnemyHealth(100);
     }
   }
 

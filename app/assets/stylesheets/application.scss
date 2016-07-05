@@ -1,18 +1,17 @@
 @import "bootstrap";
 
-.progress-bar {
+.progress-bar, .enemy-progress-bar {
  background: red;
  border: 1px solid black;
  height: 25px;
- display: none;  
  text-align: center;
 }
 
-.health-header{
+.player-health-header, .progress-bar, .enemy-progress-bar{
   display: none;
 }
 
-#perc{
+.perc{
     color: black;
 }
 
