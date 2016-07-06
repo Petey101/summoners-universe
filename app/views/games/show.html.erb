@@ -1,11 +1,7 @@
 <div class = "container-fluid" ng-app="summoners-universe"> <%= hydration('gameMeta', @game_meta) %>
-  <div class = "row">
-    <div class = "col-sm-12">
-      <ng-view>
+  <ng-view>
 
-      </ng-view>
-    </div>
-  </div>
+  </ng-view>
 </div>
 
 <br>
@@ -25,7 +21,7 @@
   
 <br>
 
-  <div class = "container">
+  <div class = "container champs">
   <div class = "row">
       <% @current_battle.possible_answers.each do |possible| %>
   	 <div class = "col-sm-3"><%= link_to(image_tag("http://ddragon.leagueoflegends.com/cdn/4.4.3/img/item/#{possible[1]}.png", class: "img-fluid tooltips", title: Battle.get_item_info(possible[1])), controller: :games, action: :check_answer, game_id: @game.id, battle_id: @current_battle.id, chosen_answer: possible[0]) %></div>

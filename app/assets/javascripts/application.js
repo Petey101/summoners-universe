@@ -21,6 +21,7 @@
 //= require angular-rails-templates
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require main
 //= require_tree ../templates
 
