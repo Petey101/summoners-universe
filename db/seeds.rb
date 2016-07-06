@@ -13,14 +13,3 @@ Battle.create(question_text: "Which item would allow you to slow down enemy unit
 Battle.create(question_text: "Which item would allow to turn invulnerable, but unable to act, avoiding damage and allowing abilities to come off cooldown?" ,possible_answers: [[1,3085],[2,3116],[3,3157],[4,3085]], correct_answer: 3)
 Battle.create(question_text: "Which item would allow to remove all crowd control effects on your character?" ,possible_answers: [[1,3085],[2,3116],[3,3140],[4,3085]], correct_answer: 3)
 
-
-
-
-3401 face of the mountain
-3092 frost queens claim
-3069 talisman of ascension
-3070 tear of the goddess
-3085 runaan's hurricane
-3116 rylai's crystal scepter
-3157 zhonyas hourglass
-3140 quicksilver sash
