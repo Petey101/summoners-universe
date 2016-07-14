@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
-  caches_action :index, expires_in: 1.minutes
+  caches_action :index
   
   def index
     render"landing_page" if !current_user
