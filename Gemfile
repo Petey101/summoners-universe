@@ -21,6 +21,8 @@ gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'googlecharts'
 gem 'jquery-ui-rails'
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
 
 group :development, :test do
   gem 'byebug'
