@@ -1,7 +1,7 @@
 <div class = "container">
-	<div class = "row">
-		<div class="intro">
-			<img src= "<%= Gchart.pie_3d(title: "Win/loss ratio", background: 'AD9393', legend:["#{@games_won} Game(s) Won", "#{@games_lost} Game(s) Lost"], data: [@win_ratio, @loss_ratio], size: '400x400') %>" >
-		</div>
-	</div>
+  <% @champions.each do |champion|%>
+    <div class = "intro col-sm-6">
+      <img src= "<%= Gchart.pie_3d(title: "#{champion} Win/Loss ratio", background: 'AD9393', legend:["#{@user.winning_champs(champion).length} Game(s) Won", "#{@user.losing_champs(champion).length} Game(s) Lost"], data: [@user.get_champ_win_ratio(champion), @user.get_champ_loss_ratio(champion)], size: '400x400') %>" >
+    </div>
+  <% end %>
 </div>

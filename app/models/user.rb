@@ -18,13 +18,29 @@ class User < ActiveRecord::Base
   def games_lost
     self.games.where(completed:true, win:false)
   end
+  
+  def winning_champs(champ)
+    self.games_won.where(picked_champion: champ)
+  end
 
+  def losing_champs(champ)
+    self.games_lost.where(picked_champion: champ)
+  end
+  
   def get_win_ratio
     ((self.games_won.length).round(2) / (self.games.length).round(2)) * 100 
   end
 
   def get_loss_ratio
     ((self.games_lost.length).round(2) / (self.games.length).round(2)) * 100 
+  end
+
+  def get_champ_win_ratio(champ)
+    ((self.winning_champs(champ).length).round(2) / (self.games_won.length).round(2)) * 100
+  end
+
+  def get_champ_loss_ratio(champ)
+    ((self.losing_champs(champ).length).round(2)/ (self.games_lost.length).round(2)) * 100
   end
 
 end
