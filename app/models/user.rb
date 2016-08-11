@@ -38,11 +38,19 @@ class User < ActiveRecord::Base
   end
 
   def get_champ_win_ratio(champ)
+    if self.winning_champs(champ).length >= 1
     ((self.winning_champs(champ).length).round(2) / (self.games_won.length).round(2)) * 100
+    else
+      100
+    end
   end
 
   def get_champ_loss_ratio(champ)
+   if self.winning_champs(champ).length >= 1
     ((self.losing_champs(champ).length).round(2)/ (self.games_lost.length).round(2)) * 100
+   else
+     0
+   end
   end
 
 end
